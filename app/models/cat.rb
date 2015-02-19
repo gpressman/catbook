@@ -12,7 +12,7 @@ class Cat < ActiveRecord::Base
 
   scope :visible, -> { where(visible: true) }
   scope :hidden,  -> { where(visble: false) }
-
+  scope :public_info,  -> { select(:id, :name, :email, :sign_in_count, :breed)}
   # More info
   # http://guides.rubyonrails.org/association_basics.html
   # https://www.railstutorial.org/book/frontmatter

@@ -11,9 +11,14 @@ class ApiController < ApplicationController
   end
 
    def show
-    cat = Cat.public.find_by(id: params[:id])
-    render(json: cat)
-   end
+	   	errors = {:no_cat => "404 not found"}
+		cat = Cat.public_info.find_by(id: params[:id])
+	    if !cat
+	    	render(json: errors, status: 404)
+		else
+			render(json: cat)
+		end
+	end
 
 
 end

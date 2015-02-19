@@ -13,8 +13,9 @@ Rails.application.routes.draw do
   resources :cats
 
   scope :api do
-  	get '/random' => 'cats#random'
-  	get '/cats' => 'cats#api_index'
-  	get '/cats/:id' => 'cats#show' 
+    get '/random' => 'api#random'
+    get '/cats' => 'api#index'
+    get '/cats/:id' => 'api#show' 
+    post '/cats/create' => 'api#create'
   end
 end
