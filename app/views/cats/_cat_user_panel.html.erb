@@ -1,6 +1,7 @@
 <% if current_cat.present? %>
 <header>
   <h3><%= current_cat.name %></h3>
+  <%= link_to "Sign out", destroy_cat_session_path, :method => :delete %>
 </header>
 
 <% end %>

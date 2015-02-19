@@ -75,7 +75,7 @@ class CatsController < ApplicationController
 
   def update
 
-    if params[:id].to_i != session[:cat_id]
+    if params[:id].to_i != current_cat.id
       redirect_to(edit_cat_user_path)
     
     elsif @cat.update(cats_params)
