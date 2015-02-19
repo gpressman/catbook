@@ -10,7 +10,7 @@ gem 'pg'
 gem 'kaminari'
 
 # Bower
-gem "bower-rails"
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
